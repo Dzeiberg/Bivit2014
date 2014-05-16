@@ -1,127 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-  <!--
-    Created using jsbin.com
-    Source can be edited via http://jsbin.com/fiqufu/2/edit
-  -->
-  <head>
-    <title>Welcome to Bivit</title>
-    <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"></link>
-    <link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css"></link>
-    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet"></link
-    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css" rel="stylesheet"></link>
+<div class="center hero-unit">
+  <h1>Welcome to Bivit</h1>
 
-	<%#= stylesheet_link_tag 'home' %>
-  </head>
+  <h2>
+    This is the home page for the
+    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
+    sample application.
+  </h2>
 
-  <body>
-    <div class="login">
-      <h2>Login</h2>
-      <form>
-        <input name="user" placeholder="Username" type="text"></input>
-        <br/>
-        <input name="pwd" placeholder="Password" type="password"></input>
-        <br/>
-        <input type="submit" value="Submit"></input>
-      </form>
-    </div>
-    <div class="signup">
-      <div>
-        <h2>Sign Up</h2>
-        <form>
-          <input name="email" placeholder="Email" type="text"></input>
-          <br/>
-          <input name="firstname" placeholder="First Name" type="text"></input>
-          <br/>
-          <input name="lastname" placeholder="Last Name" type="text"></input>
-          <br/>
-          <input name="pwd" placeholder="Password" type="password"></input>
-          <br/>
-          <input name="confirmpwd" placeholder="Confirm Password" type="password"></input>
-          <br/>
-          <input type="submit" value="Submit"></input>
-        </form>
-      </div>
-    </div>
+  <%= link_to "Sign up now!",signup_path, class: "btn btn-large btn-primary" %>
+</div>
 
-    <script></script>
-  </body>
-  <style>
-.login {
-  padding-top: 25px;
-  text-align: center;
-}
-.login h2 {
-    color: #fff;
-    font-size: 35px;
-    font-family: 'Lobster', cursive;
-    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
-}
-.login form {
-    background: -webkit-gradient(linear, bottom, left 175px, from(#cccccc), to(#eeeeee));
-    background: -moz-linear-gradient(bottom, #cccccc, #eeeeee 175px);
-    margin: auto;
-    position: relative;
-    width: 550px;
-    height: 130px;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: bold;
-    color: #09C;
-    text-decoration: none;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    padding: 10px;
-    border: 1px solid #999;
-    border: inset 1px solid #333;
-}
-.login input {
-    margin-bottom: 10px;
-}
-
-
-.signup {
-  text-align: center;
-}
-.signup h2 {
-    color: #fff;
-    font-size: 35px;
-    font-family: 'Lobster', cursive;
-    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
-    margin-bottom: 40px;
-}
-.signup form {
-    background: -webkit-gradient(linear, bottom, left 175px, from(#cccccc), to(#eeeeee));
-    background: -moz-linear-gradient(bottom, #cccccc, #eeeeee 175px);
-    margin: auto;
-    position: relative;
-    width: 550px;
-    height: 250px;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: bold;
-    color: #09C;
-    text-decoration: none;
-    \-webkit-border-radius: 10px;
-    \-moz-border-radius: 10px;
-    border-radius: 10px;
-    padding: 10px;
-    border: 1px solid #999;
-    border: inset 1px solid #333;
-    padding-bottom: 20px;
-}
-.signup input {
-    margin-bottom: 10px;
-}
-
-
-body {
-  background: url(http://www.wallpaperstop.com/wallpapers/nature-wallpapers/scenery-wallpapers/hd-landscape-wallpaper-1440x900-1008115.jpg) no-repeat fixed 100% 100%;
-  height: auto;
-  height: 10%;
-}
-}</style>
-</html>
+<%= link_to image_tag("logo.png", alt: "Rails"), 'http://bivit.com/' %>

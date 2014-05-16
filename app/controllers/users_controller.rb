@@ -8,11 +8,8 @@ class UsersController < ApplicationController
   def index
   	@users = User.all
   end
-  def edit
-    @user = User.find(params[:id])
-  end
 
-  def create
+   def create
     @user = User.new(user_params)    # Not the final implementation!
     if @user.save
       sign_in @user
@@ -26,7 +23,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password,
+      params.require(:user).permit(:name, :email, :password,
                                    :password_confirmation)
-  end
+    end
 end
