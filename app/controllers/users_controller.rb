@@ -6,8 +6,12 @@ class UsersController < ApplicationController
   	@user = User.find(params[:id])
   end
   def index
+    if !signed_in?
+      @users = User.none
+    else
   	@users = User.all
   end
+end
 
    def create
     @user = User.new(user_params)    # Not the final implementation!
