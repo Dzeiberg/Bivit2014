@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   def index
     if !signed_in?
       @users = User.none
+      redirect_to '/signin'
     else
   	@users = User.all
   end
