@@ -11,22 +11,10 @@
     <h2>Sign Up</h2>
     <%= form_for(@user) do |f| %>
 	<%= render 'shared/error_messages' %>
-      <%#= f.label :name %>
-      <%#= f.text_field :name %>
-
-      <%#= f.label :email %>
-      <%#= f.text_field :email %>
-
-      <%#= f.label :password %>
-      <%#= f.password_field :password %>
-
-      <%#= f.label :password_confirmation, "Confirmation" %>
-      <%#= f.password_field :password_confirmation %>
-
-      <input name="name" placeholder="Name" type="text"></input><br>
-      <input name="email" placeholder="Email" type="text"></input><br/>
-      <input name="password" placeholder="Password" type="password"></input><br/>
-      <input name="password_confirmation" placeholder="Confirm Password" type="password"></input><br/>
+      <%= f.text_field :name, :placeholder => "Name" %>
+      <%= f.text_field :email, :placeholder => "Email" %>
+      <%= f.password_field :password, :placeholder => "Password"%>
+      <%= f.password_field :password_confirmation, :placeholder => "Confirm Password" %><br/>
 
       <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
     <% end %>
@@ -36,13 +24,13 @@
 <style>
 .signup {
   text-align: center;
+  padding-top: 25px;
 }
 .signup h2 {
     color: #fff;
     font-size: 35px;
     font-family: 'Lobster', cursive;
     text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
-    margin-bottom: 40px;
 }
 .signup form {
     background: -webkit-gradient(linear, bottom, left 175px, from(#cccccc), to(#eeeeee));
@@ -50,26 +38,28 @@
     margin: auto;
     position: relative;
     width: 550px;
-    height: 250px;
+    height: 220px;
     font-family: 'Ubuntu', sans-serif;
     font-size: 14px;
     line-height: 24px;
     font-weight: bold;
     color: #09C;
     text-decoration: none;
-    \-webkit-border-radius: 10px;
-    \-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
     border-radius: 10px;
     padding: 10px;
     border: 1px solid #999;
     border: inset 1px solid #333;
-    padding-bottom: 20px;
+    display: block;
+    text-align: center;
 }
 .signup input {
     margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-
 body {
   background: url(http://www.wallpaperstop.com/wallpapers/nature-wallpapers/scenery-wallpapers/hd-landscape-wallpaper-1440x900-1008115.jpg) no-repeat fixed 100% 100%;
   height: auto;

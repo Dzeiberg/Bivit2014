@@ -9,15 +9,9 @@
   <div class="login">
     <h2>Login</h2>
     <%= form_for(:session, url: sessions_path) do |f|%>
+      <%= f.text_field :email, :placeholder => "Email" %>
+      <%= f.password_field :password, :placeholder => "Password" %>
 
-      <%#= f.label :email %>
-      <%#= f.text_field :email %>
-
-      <%#= f.label :password %>
-      <%#= f.password_field :password %>
-
-      <input name="email" placeholder="Email" type="email"></input><br/>
-      <input name="password" placeholder="Password" type="password"></input><br/>
 
       <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
     <% end %>
@@ -43,7 +37,7 @@
     margin: auto;
     position: relative;
     width: 550px;
-    height: 130px;
+    height: 120px;
     font-family: 'Ubuntu', sans-serif;
     font-size: 14px;
     line-height: 24px;
@@ -56,9 +50,14 @@
     padding: 10px;
     border: 1px solid #999;
     border: inset 1px solid #333;
+    display: block;
+    text-align: center;
 }
 .login input {
     margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 body {
   background: url(http://www.wallpaperstop.com/wallpapers/nature-wallpapers/scenery-wallpapers/hd-landscape-wallpaper-1440x900-1008115.jpg) no-repeat fixed 100% 100%;
@@ -66,9 +65,6 @@ body {
   left: 0;
 }
 p {
-  color: white;
-}
-<%=link_to%> {
   color: white;
 }
 
