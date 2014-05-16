@@ -1,0 +1,19 @@
+<h1>Explore</h1>
+<h2>Posts</h2>
+<div  class= "explore">
+<% @posts.each do |post| %>
+  <div>
+		<ul>
+			<li class="box">
+        
+        <img><%=gravatar_for User.find(post.user_id)%></img>
+        <h4><%=User.find(post.user_id).name%></h4>
+        <p><%=post.content%></p>
+        <%=link_to "Show","microposts/#{post.id}"%>
+        <%= link_to 'Edit', edit_micropost_path(post.id) %>
+        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+			</li>
+		</ul>
+	</div>
+  <%end%>
+</div>

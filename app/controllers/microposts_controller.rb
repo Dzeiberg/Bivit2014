@@ -50,6 +50,9 @@ class MicropostsController < ApplicationController
       end
     end
   end
+  def explore
+    @posts=Micropost.all
+  end
 
   # DELETE /microposts/1
   # DELETE /microposts/1.json

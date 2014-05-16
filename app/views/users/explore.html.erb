@@ -1,0 +1,13 @@
+<h1>Explore</h1>
+<h2>Posts</h2>
+<% @posts.each do |post| %>
+	<div>
+		<ul>
+			<li>
+				<img src="http://lorempixum.com/100/100/nature/1">
+				<h3><% User.find(post.user_id)%></h3>
+				<p><%post.content%></p>
+			</li>
+		</ul>
+	</div>
+<% end %>
