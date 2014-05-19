@@ -1,0 +1,71 @@
+  <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"></link>
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css"></link>
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet"></link
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css" rel="stylesheet"></link>
+
+
+<% provide(:title, "Sign in") %>
+<div class="row">
+  <div class="login">
+    <h2>Login</h2>
+    <%= form_for(:session, url: sessions_path) do |f|%>
+      <%= f.text_field :email, :placeholder => "Email" %>
+      <%= f.password_field :password, :placeholder => "Password" %>
+
+
+      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+    <% end %>
+
+    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+  </div>
+</div>
+
+<style>
+.login {
+  padding-top: 25px;
+  text-align: center;
+}
+.login h2 {
+    color: #fff;
+    font-size: 35px;
+    font-family: 'Lobster', cursive;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+.login form {
+    background: -webkit-gradient(linear, bottom, left 175px, from(#cccccc), to(#eeeeee));
+    background: -moz-linear-gradient(bottom, #cccccc, #eeeeee 175px);
+    margin: auto;
+    position: relative;
+    width: 550px;
+    height: 120px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #09C;
+    text-decoration: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #999;
+    border: inset 1px solid #333;
+    display: block;
+    text-align: center;
+}
+.login input {
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+  background: url(http://www.wallpaperstop.com/wallpapers/nature-wallpapers/scenery-wallpapers/hd-landscape-wallpaper-1440x900-1008115.jpg) no-repeat fixed 100% 100%;
+  height: auto;
+  left: 0;
+}
+p {
+  color: white;
+}
+
+</style>
