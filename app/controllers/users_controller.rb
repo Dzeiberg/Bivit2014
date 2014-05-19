@@ -11,8 +11,13 @@ class UsersController < ApplicationController
       redirect_to '/signin'
     else
   	@users = User.all
+    end
   end
-end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
 
    def create
     @user = User.new(user_params)    # Not the final implementation!
