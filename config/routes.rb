@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :users
 
+  resources :users
+  resources :microposts, only: [:create, :destroy]
   resources :sessions, only: [:new, :create, :destroy]
   
   match '/signin',  to: 'sessions#new',         via: 'get'
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
   match '/help',  to:     'static_pages#help', via: 'get'
   match '/about', to:  'static_pages#about',   via: 'get'
   match '/contact',to: 'static_pages#contact', via: 'get'
-
+  
 
   resources :microposts
 
@@ -24,6 +25,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   root 'static_pages#home'
+
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -73,4 +76,9 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+=begin
+  unless Rails.application.config.consider_all_requests_local
+    match '*not_found', to: 'errors#error_404'
+  end
+=end
 end
