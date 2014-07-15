@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
-
-
+#server deploy stuff
+gem 'capistrano', '~> 3.1.0'
+gem 'capistrano-bundler', '~> 1.1.2'
+gem 'capistrano-rails', '~> 1.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 gem 'bootstrap-sass', '2.3.2.0'
